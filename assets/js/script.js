@@ -6,6 +6,7 @@ $("#currentDay").text(currentDay.format("dddd, DD/MM/YYYY"));
 // Present timeblocks for standard business hours when the user scrolls down.
 
 // Color-code each timeblock based on past, present, and future when the timeblock is viewed.
+// use moment to check the current time and create a function to compare the viewed timeblock is past,present, and future
 
 // Allow a user to enter an event when they click a timeblock.
 

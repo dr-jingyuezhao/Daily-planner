@@ -31,7 +31,7 @@ $(".saveBtn").on("click", function () {
     // add code to display the message: Appointment is added to localStorage
     var header = $(".jumbotron");
     var descriptionEl = $("<span>");
-    descriptionEl.text("Appointment is added to localStorage ✔️");
+    descriptionEl.text(time + " appointment is added to localStorage ✔️");
     descriptionEl.addClass("description");
     header.append(descriptionEl);
 });

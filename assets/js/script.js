@@ -27,14 +27,15 @@ $(".saveBtn").on("click", function () {
     var time = $(this).siblings(".hour").text();
     var event = $(this).siblings(".description").val();
     localStorage.setItem(time, event);
-    // console.log("stored");
+    console.log("The event is stored for " + time);
 });
+
 // Persist events between refreshes of a page.
 function loadStoredEvent() {
     $(".hour").each(function () {
         var currentHour = $(this).text();
         var storedEvent = localStorage.getItem(currentHour);
-        console.log(storedEvent);
+        console.log(currentHour + ": " + storedEvent);
         $(this).siblings(".description").val(storedEvent);
     });
 }

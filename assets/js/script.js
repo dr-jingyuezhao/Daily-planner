@@ -27,7 +27,13 @@ $(".saveBtn").on("click", function () {
     var time = $(this).siblings(".hour").text();
     var event = $(this).siblings(".description").val();
     localStorage.setItem(time, event);
-    console.log("The event is stored for " + time);
+    console.log("The event is saved for " + time);
+    // add code to display the message: Appointment Added to localStorage
+    var header = $(".jumbotron");
+    var descriptionEl = $("<span>");
+    descriptionEl.text("Appointment is added to localStorage ✔️");
+    descriptionEl.addClass("description");
+    header.append(descriptionEl);
 });
 
 // Persist events between refreshes of a page.

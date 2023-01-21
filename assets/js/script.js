@@ -30,5 +30,14 @@ $(".saveBtn").on("click", function () {
     // console.log("stored");
 });
 // Persist events between refreshes of a page.
+function loadStoredEvent() {
+    $(".hour").each(function () {
+        var currentHour = $(this).text();
+        var storedEvent = localStorage.getItem(currentHour);
+        console.log(storedEvent);
+        $(this).siblings(".description").val(storedEvent);
+    });
+}
 
 timeChecker();
+loadStoredEvent();

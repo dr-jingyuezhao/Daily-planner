@@ -1,6 +1,6 @@
 // Declare currentDay variable and use moment.js to convert to "dddd(Day of Week), DD/MM/YYYY"
 var todayDate = moment();
-$("#currentDay").text(todayDate.format("dddd, MMMM Do YYYY, h A"));
+$("#currentDay").text(todayDate.format("dddd, MMMM Do YYYY, h:mm:ss A"));
 
 // Add code to create timeblocks
 // Present timeblocks for standard business hours when the user scrolls down.

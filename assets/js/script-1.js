@@ -1,4 +1,4 @@
-// Declare currentDay variable and use moment.js to convert to "dddd(Day of Week), DD/MM/YYYY"
+// Declare currentDay variable and use moment.js to convert to "dddd(Day of Week), MMMM Do YYYY"
 var todayDate = moment();
 $("#currentDay").text(todayDate.format("dddd, MMMM Do YYYY"));
 
@@ -18,7 +18,7 @@ $(containerEl).html(function () {
 });
 
 // Color-code each timeblock based on past, present, and future when the timeblock is viewed.
-// use moment to check the current time and create a function to compare the viewed timeblock is past,present, and future
+// use moment to check the current time and create a function to compare the viewed timeblock is past, present, and future
 function timeChecker() {
     var nowHour = moment().hour();
     $(".time-block").each(function () {
@@ -32,8 +32,8 @@ function timeChecker() {
         }
     })
 }
-// Allow a user to enter an event when they click a timeblock.
 
+// Allow a user to enter an event when they click a timeblock.
 // Save the event in local storage when the save button is clicked in that timeblock.
 $(".saveBtn").on("click", function () {
     var time = $(this).siblings(".hour").text();
@@ -43,7 +43,7 @@ $(".saveBtn").on("click", function () {
     // add code to display the message: Appointment is added to localStorage
     var header = $(".jumbotron");
     var descriptionEl = $("<span>");
-    descriptionEl.text(time + " appointment is added to localStorage ✔️");
+    descriptionEl.text(time + " appointment is added ✔️");
     descriptionEl.addClass("description");
     header.append(descriptionEl);
 });
